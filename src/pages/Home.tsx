@@ -2,7 +2,7 @@ import React, { type ReactElement } from 'react';
 
 import HomeTemplate from '../components/templates/Home';
 
-import Photo from '../assets/img/my-picture.png';
+import Photo from '../assets/img/my-picture.jpg';
 
 function Home(): ReactElement {
   return (

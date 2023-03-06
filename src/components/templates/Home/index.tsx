@@ -1,8 +1,8 @@
 import React, { type ReactElement } from 'react';
 
-import Image, { type Props as ImageInterface } from '../../atoms/Image';
+import { type Props as ImageInterface } from '../../atoms/Image';
 
-import { Container } from './styles';
+import { Container, Conteiner, ImageComponent } from './styles';
 
 export interface Props {
   ImageProps?: ImageInterface;
@@ -11,7 +11,21 @@ export interface Props {
 function Home({ ImageProps }: Props): ReactElement {
   return (
     <Container>
-      <Image {...ImageProps} />
+      <Conteiner>
+        <ImageComponent {...ImageProps} />
+        <div>{/* <img alt="" /> */}</div>
+        <div>
+          <h1>
+            HI! IM <span>ÁLEFE CRUZ</span>
+          </h1>
+          <p>
+            I AM <span>FULL STACK</span> DEVELOPER
+          </p>
+          <button className="button" type="submit">
+            Ver Projetos
+          </button>
+        </div>
+      </Conteiner>
     </Container>
   );
 }
