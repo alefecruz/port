@@ -1,7 +1,17 @@
 import React, { type ReactElement } from 'react';
 
+import HomeTemplate from '../components/templates/Home';
+
+import Photo from '../assets/img/my-picture.png';
+
 function Home(): ReactElement {
-  return <div className="App"></div>;
+  return (
+    <HomeTemplate
+      ImageProps={{
+        src: Photo,
+      }}
+    />
+  );
 }
 
 export default Home;
