@@ -7,11 +7,9 @@ import { GlobalStyles } from './global';
 import { selectTheme } from './global/theme';
 
 function App(): ReactElement {
-  console.log('Alow');
-
-  console.log(selectTheme('light'));
+  const theme = selectTheme('dark');
   return (
-    <ThemeProvider theme={selectTheme('light')}>
+    <ThemeProvider theme={theme}>
       <Home />
       <GlobalStyles />
     </ThemeProvider>

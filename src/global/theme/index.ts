@@ -1,24 +1,21 @@
-import { COLORS as DEFAULT_COLORS } from './default/colors';
-import { COLORS as DARK_COLORS } from './dark/colors';
-import { COLORS as LIGHT_COLORS } from './light/colors';
+import { COLORS as DEFAULT_COLORS } from './colors/default';
+import { COLORS as DARK_COLORS } from './colors/dark';
+import { COLORS as LIGHT_COLORS } from './colors/light';
 
-interface themeMapInterface {
-  default: Record<string, typeof DEFAULT_COLORS>;
-  dark: Record<string, typeof DARK_COLORS>;
-  light: Record<string, typeof LIGHT_COLORS>;
-}
-const themeMap: themeMapInterface = {
-  default: {
-    COLORS: DEFAULT_COLORS,
-  },
-  dark: {
-    COLORS: DARK_COLORS,
-  },
-  light: {
-    COLORS: LIGHT_COLORS,
-  },
+const colorMap = {
+  default: { COLORS: DEFAULT_COLORS },
+  dark: { COLORS: DARK_COLORS },
+  light: { COLORS: LIGHT_COLORS },
 };
 
+/**
+ * Retorna um objeto com as cores do tema selecionado.
+ *
+ * @description Esta função retorna um objeto com as cores do tema selecionado.
+ *
+ * @param color A cor do tema a ser selecionado.
+ * @returns Um objeto com as cores do tema selecionado.
+ */
 export const selectTheme = (
-  theme: keyof typeof themeMap = 'default'
-): (typeof themeMap)[keyof typeof themeMap] => themeMap[theme];
+  color: keyof typeof colorMap = 'default'
+): (typeof colorMap)[keyof typeof colorMap] => colorMap[color];
