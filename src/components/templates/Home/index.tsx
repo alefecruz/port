@@ -12,7 +12,6 @@ function Home({ ImageProps }: Props): ReactElement {
   return (
     <Container>
       <Image {...ImageProps} />
-      testando
     </Container>
   );
 }
