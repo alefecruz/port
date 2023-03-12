@@ -3,6 +3,7 @@ import { COLORS as DARK_COLORS } from './colors/dark';
 import { COLORS as LIGHT_COLORS } from './colors/light';
 
 import { FONTS as Montserrat } from './fonts/Montserrat';
+import { FONTS as Lora } from './fonts/Lora';
 
 import { type ColorFormat } from './colors/interfaces';
 import { type FontFormat } from './fonts/interfaces';
@@ -15,6 +16,7 @@ const colorMap = {
 
 const fontMap = {
   montserrat: { FONTS: Montserrat },
+  lora: { FONTS: Lora },
 };
 
 interface SelectThemeReturnInterface {

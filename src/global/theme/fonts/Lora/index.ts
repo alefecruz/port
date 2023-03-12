@@ -2,11 +2,11 @@ import { css, type FlattenSimpleInterpolation } from 'styled-components';
 
 import { type FontFormat } from '../interfaces';
 
-import Montserrat from './Montserrat.ttf';
+import Lora from './Lora.ttf';
 
 const font: FlattenSimpleInterpolation = css`
-  font-family: 'Montserrat';
-  src: url(${Montserrat});
+  font-family: 'Lora';
+  src: url(${Lora});
 `;
 
 export const FONTS: FontFormat = {

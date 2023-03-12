@@ -12,7 +12,7 @@ function Home({ ImageProps }: Props): ReactElement {
   return (
     <Container>
       <Image {...ImageProps} />
-      TESTASNDO
+      testando
     </Container>
   );
 }
