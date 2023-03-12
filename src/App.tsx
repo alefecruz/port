@@ -7,7 +7,7 @@ import { GlobalStyles } from './global';
 import { selectTheme } from './global/theme';
 
 function App(): ReactElement {
-  const theme = selectTheme('dark');
+  const theme = selectTheme('default', 'montserrat');
   return (
     <ThemeProvider theme={theme}>
       <Home />
