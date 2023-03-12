@@ -9,6 +9,10 @@ export const GlobalStyles = createGlobalStyle`
   box-sizing: border-box;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 body {
   background-color: hsl(0, 0%, 100%);
   color: hsl(0, 1%, 16%);

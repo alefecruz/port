@@ -5,8 +5,11 @@ import { COLORS as LIGHT_COLORS } from './colors/light';
 import { FONTS as Montserrat } from './fonts/Montserrat';
 import { FONTS as Lora } from './fonts/Lora';
 
-import { type ColorFormat } from './colors/interfaces';
-import { type FontFormat } from './fonts/interfaces';
+import { SIZES as DEFAULT_SIZE } from './sizes/default';
+import { MEDIAS as DEFAULT_MEDIAS } from './medias/default';
+import { SPACINGS as DEFAULT_SPACINGS } from './spacings/default';
+
+import { type ThemeType } from './styled';
 
 const colorMap = {
   default: { COLORS: DEFAULT_COLORS },
@@ -19,23 +22,37 @@ const fontMap = {
   lora: { FONTS: Lora },
 };
 
-interface SelectThemeReturnInterface {
-  COLORS: ColorFormat;
-  FONTS: FontFormat;
-}
+const sizeMap = {
+  default: { SIZES: DEFAULT_SIZE },
+};
 
-/**
- * Retorna um objeto com as cores do tema selecionado.
- *
- * @description Esta função retorna um objeto com as cores do tema selecionado.
- *
- * @param color A cor do tema a ser selecionado.
- * @returns Um objeto com as cores do tema selecionado.
- */
-export const selectTheme = (
-  color: keyof typeof colorMap = 'default',
-  font: keyof typeof fontMap = 'montserrat'
-): SelectThemeReturnInterface => ({
-  ...colorMap[color],
-  ...fontMap[font],
-});
+const mediaMap = {
+  default: { MEDIAS: DEFAULT_MEDIAS },
+};
+
+const spacingMap = {
+  default: { SPACINGS: DEFAULT_SPACINGS },
+};
+
+interface selectThemeInterface {
+  color: keyof typeof colorMap;
+  font: keyof typeof fontMap;
+  size: keyof typeof sizeMap;
+  media: keyof typeof mediaMap;
+  spacing: keyof typeof spacingMap;
+}
+export const selectTheme = ({
+  color = 'default',
+  font = 'montserrat',
+  size = 'default',
+  media = 'default',
+  spacing = 'default',
+}: selectThemeInterface): ThemeType => {
+  return {
+    ...colorMap[color],
+    ...fontMap[font],
+    ...sizeMap[size],
+    ...mediaMap[media],
+    ...spacingMap[spacing],
+  };
+};
