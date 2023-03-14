@@ -2,8 +2,9 @@ import { COLORS as DEFAULT_COLORS } from './colors/default';
 import { COLORS as DARK_COLORS } from './colors/dark';
 import { COLORS as LIGHT_COLORS } from './colors/light';
 
-import { FONTS as Montserrat } from './fonts/Montserrat';
-import { FONTS as Lora } from './fonts/Lora';
+import { FONTS as MONTSERRAT } from './fonts/montserrat';
+import { FONTS as LORA } from './fonts/lora';
+import { FONTS as SONO } from './fonts/sono';
 
 import { SIZES as DEFAULT_SIZE } from './sizes/default';
 import { MEDIAS as DEFAULT_MEDIAS } from './medias/default';
@@ -18,8 +19,9 @@ const colorMap = {
 };
 
 const fontMap = {
-  montserrat: { FONTS: Montserrat },
-  lora: { FONTS: Lora },
+  montserrat: { FONTS: MONTSERRAT },
+  lora: { FONTS: LORA },
+  sono: { FONTS: SONO },
 };
 
 const sizeMap = {
