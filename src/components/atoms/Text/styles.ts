@@ -63,12 +63,13 @@ const textAlignMap = {
 
 export const TextComponent = styled.h1.attrs(
   ({ typeScale }: typeScaleInterface) => ({
-    as: typeScale === undefined && 'span',
+    as: typeScale,
   })
 )<Props>`
-  ${({ typeScale }) =>
-    typeScale !== undefined ? typeScaleMap[typeScale] : 'span'}
-  ${({ color, theme }) => (color !== undefined ? theme.COLORS[color] : 'DARK')}
-  ${({ letterCase }) => letterCase !== undefined && letterCaseMap[letterCase]}
   ${({ textAlign }) => textAlign !== undefined && textAlignMap[textAlign]}
+  ${({ letterCase }) => letterCase !== undefined && letterCaseMap[letterCase]}
+  ${({ typeScale }) =>
+    typeScale !== undefined ? typeScaleMap[typeScale] : typeScaleMap.span}
+  color: ${({ color, theme }) =>
+    color !== undefined ? theme.COLORS[color] : theme.COLORS.DARK}
 `;

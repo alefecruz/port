@@ -1,11 +1,11 @@
-import React, { type ReactElement, type ImgHTMLAttributes } from 'react';
-import { ImageComponent } from './styles';
+import React, { type ReactElement } from 'react';
+import * as Styled from './styles';
 
-export type Props = ImgHTMLAttributes<HTMLImageElement>;
+import { type Props } from './interfaces';
 
 function Image(props: Props): ReactElement {
   return (
-    <ImageComponent
+    <Styled.ImageComponent
       src="/assets/images/default.svg"
       alt="Image not found"
       {...props}

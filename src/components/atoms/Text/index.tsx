@@ -1,11 +1,13 @@
 import type React from 'react';
 import { type ReactElement } from 'react';
-import { TextComponent } from './styles';
+import * as Styled from './styles';
 
 import { type Props } from './interfaces';
 
 function Text(props: Props): ReactElement {
-  return <TextComponent {...props}>{props?.children}</TextComponent>;
+  return (
+    <Styled.TextComponent {...props}>{props?.children}</Styled.TextComponent>
+  );
 }
 
 export default Text;

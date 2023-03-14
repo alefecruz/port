@@ -1,8 +1,8 @@
 import { type ColorFormat } from './interfaces';
 
 export const COLORS: ColorFormat = {
-  PRIMARY: '#FFFFFF',
+  PRIMARY: '#2D132C',
   SECONDARY: '#FFFFFF',
   LIGHT: '#FFFFFF',
-  DARK: '#FFFFFF',
+  DARK: '#000000',
 };

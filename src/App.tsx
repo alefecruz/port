@@ -9,12 +9,11 @@ import { selectTheme } from './global/theme';
 function App(): ReactElement {
   const theme = selectTheme({
     color: 'default',
-    font: 'lora',
+    font: 'montserrat',
     size: 'default',
     media: 'default',
     spacing: 'default',
   });
-  console.log(theme);
   return (
     <ThemeProvider theme={theme}>
       <Home />

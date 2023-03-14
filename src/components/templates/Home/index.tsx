@@ -1,18 +1,16 @@
 import React, { type ReactElement } from 'react';
 
-import { type Props as ImageInterface } from '../../atoms/Image';
-
 import * as Styled from './styles';
 
-export interface Props {
-  ImageProps?: ImageInterface;
-}
+import { type Props } from './interfaces';
 
-function Home({ ImageProps }: Props): ReactElement {
+function Home({ MyPictureProps, NavbarProps }: Props): ReactElement {
   return (
     <Styled.Container>
-      <Styled.ContentInfo />
-      <Styled.ImageComponent {...ImageProps} />
+      <Styled.ImageComponent {...MyPictureProps} />
+      <Styled.ContentInfo>
+        <Styled.NavbarComponent {...NavbarProps} />
+      </Styled.ContentInfo>
     </Styled.Container>
   );
 }
